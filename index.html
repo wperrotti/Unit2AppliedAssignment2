@@ -6,6 +6,7 @@ This will enable a large image to format appropriately to the available space th
 instance if open through a mobile device the images will format down to a square and will crop out some of the 
 unessential parts of the image.
 -->
+
 <!doctype html>
 <html>
 <head>
@@ -41,42 +42,46 @@ img {
 
 <body>
 
-
+<!-- Below we are providing multiple image sizes in order for the bread, burger and fish images to crop and tailor to the users viewing enviornment. -->
+	
 <h1>Blackstone Bistro Gallery</h1>
 <p>Not is our food good, it's also good-looking! Our patrons often stop to admire our fare with a quick Instagram before digging in. We've collected a few of our favorite shots here.</p>
 
 <h2>Our Baked Goods</h2>
-<p>
-<picture>
-<source media="(min-width: 480px)" 
- srcset="images/bread-1200.jpg 1200w, 
- images/bread-800.jpg 800w"
- sizes="80vw">
- <img src="images/bread-400.jpg" alt="close-up of sliced rustic 
-bread">
-</picture>
-<br>
-We start our day at the crack of dawn to bake our own muffins, bread, and dinner rolls. Loaves not used that day are donated to the local food shelter.
+<!--
+Here we are using the picture element in order to specify multiple image options for the bread image
+Belows this code tells the brower if there is a non supporting device use the smaller image. If the 
+viewport is 1200 pixels wide or larger then to use the larger bread image. And if it is wider than 
+800 pixels then used the middle sized one. This applies to both the burger and fish images below.
+-->
+<p><picture>
+	<source media="(min-width: 480px)" 
+ 	srcset="images/bread-1200.jpg 1200w, 
+ 	images/bread-800.jpg 800w"
+ 	sizes="80vw">
+ 	<img src="images/bread-400.jpg" alt="close-up of sliced rustic bread">
+</picture>	
+<br>We start our day at the crack of dawn to bake our own muffins, bread, and dinner rolls. Loaves not used that day are donated to the local food shelter.
 
 
 <h2>Our Burgers</h2>
 <p><picture>
-<source media="(min-width: 480px)" 
- srcset="images/burgers-1200.jpg 1200w, 
- images/burgers-800.jpg 800w"
- sizes="80vw">
- <img src="images/burgers-400.jpg" alt="close-up of juicy burgers">
+	<source media="(min-width: 480px)" 
+ 	srcset="images/burgers-1200.jpg 1200w, 
+ 	images/burgers-800.jpg 800w"
+ 	sizes="80vw">
+ 	<img src="images/burgers-400.jpg" alt="close-up of juicy burgers">
 </picture>
 <br>People come from all over to enjoy our lovingly made burgers. We grind our own locally-sourced organic beef and turkey so you know it's fresh and free from fillers and other nonsense. Go for one of our creative topping combos or stick with the classics. </p>
 
 
 <h2>Catch of the Day</h2>
 <p><picture>
-<source media="(min-width: 480px)" 
- srcset="images/fish-1200.jpg 1200w, 
- images/fish-800.jpg 800w"
- sizes="80vw">
- <img src="images/fish-400.jpg" alt="close-up of fresh seafood special">
+	<source media="(min-width: 480px)" 
+ 	srcset="images/fish-1200.jpg 1200w, 
+	images/fish-800.jpg 800w"
+ 	sizes="80vw">
+ 	<img src="images/fish-400.jpg" alt="close-up of fresh seafood special">
 </picture>
 <br>Our chef works with local fisherman to pick the freshest the sea has to offer for our daily seafood special. Our Roast Cod Caponata with Roasted Potatoes is an old favorite with our regulars.</p>
 
